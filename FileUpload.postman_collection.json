@@ -1,0 +1,71 @@
+{
+	"info": {
+		"_postman_id": "c68956ea-a6ed-4004-a2f8-049238642923",
+		"name": "FileUpload",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34008111"
+	},
+	"item": [
+		{
+			"name": "Single File Upload",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/HP/Desktop/MANUAL and AUTOMATION_TESTING/AutomationPractise/Orders_CSV - Sheet1.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/uploadFile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"uploadFile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Multiple Files Download",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "files",
+							"type": "file",
+							"src": [
+								"/C:/Users/HP/Desktop/MANUAL and AUTOMATION_TESTING/AutomationPractise/Orders_CSV - Sheet1.csv",
+								"/C:/Users/HP/Desktop/MANUAL and AUTOMATION_TESTING/AutomationPractise/Students.json"
+							]
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/uploadMultipleFiles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"uploadMultipleFiles"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
